@@ -5,7 +5,7 @@
 <br>
 
 <b>
-python v 3.8.5
+Python v 3.8.5
 </b>
 <br>
 
