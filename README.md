@@ -1,8 +1,5 @@
 # pyWeatherBot
 
-<br>
-<img src="welcome.png">
-<br>
 
 <b>
 Python v 3.8.5
