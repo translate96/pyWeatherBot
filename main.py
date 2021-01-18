@@ -15,7 +15,7 @@ def welcome(message):
 
 @bot.message_handler(commands=['help'])
 def welcome(message):
-	bot.send_message(message.chat.id, '/start запуск бота\n/help команды бота\n/weather <имя города>')
+	bot.send_message(message.chat.id, '/start запуск бота\n/help команды бота\n/чтоб узнать погоду напишите в чат название города')
 
 
 @bot.message_handler(content_types=['text'])
