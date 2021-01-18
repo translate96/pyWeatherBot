@@ -9,8 +9,8 @@ bot = telebot.TeleBot(api_telegram)
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
-	bot.send_message(message.chat.id, 'Добро пожаловать, ' + str(message.from_user.username) + ',' + '\n' +
-	 'чтоб узнать погоду напишите команду /weather <имя города>')
+	bot.send_message(message.chat.id, 'Добро пожаловать, ' + str(message.from_user.first_name) + ',' + '\n' +
+	 'чтоб узнать погоду напишите в чат название города')
 
 
 @bot.message_handler(commands=['help'])
@@ -18,9 +18,9 @@ def welcome(message):
 	bot.send_message(message.chat.id, '/start запуск бота\n/help команды бота\n/weather <имя города>')
 
 
-@bot.message_handler(commands=['weather'])
+@bot.message_handler(content_types=['text'])
 def test(message):
-	city_name = message.text[9:]
+	city_name = message.text
 	
 	try:
 		params = {'APPID': api_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
