@@ -17,7 +17,3 @@ pip install requests
 api_weather = ''
 api_telegram = ''
 ```
-
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
